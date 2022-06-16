@@ -1,0 +1,3 @@
+Import "GlobalHotkeysHades.lua"
+To "StyxScribeScripts/GlobalHotkeysHades.py"
+Replace "GlobalHotkeysHades.py"
