@@ -1,3 +1,4 @@
+Load Priority 1
 Import "GlobalHotkeysHades.lua"
 To "StyxScribeScripts/GlobalHotkeysHades.py"
 Replace "GlobalHotkeysHades.py"

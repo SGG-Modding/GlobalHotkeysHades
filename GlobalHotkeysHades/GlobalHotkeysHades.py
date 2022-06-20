@@ -30,13 +30,16 @@ def my_callback():
         scribe.send("GlobalHotkeysHades: " + "instant_death")
     def spawn_enemies():
         scribe.send("GlobalHotkeysHades: " + "spawn_enemies")
+    def spawn_meg():
+        scribe.send("GlobalHotkeysHades: " + "spawn_meg")
      
 
     with keyboard.GlobalHotKeys({
         '<alt>+<shift>+g': one_health,
         '<alt>+<shift>+h': fifty_damage,
         '<alt>+<shift>+j': instant_death,
-        '<alt>+<shift>+k': spawn_enemies}) as h:
+        '<alt>+<shift>+k': spawn_enemies,
+        '<alt>+<shift>+l': spawn_meg}) as h:
         h.join()
 
 

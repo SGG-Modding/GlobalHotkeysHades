@@ -31,6 +31,17 @@ GlobalHotkeysHades.Events = {
 		  SetupEnemyObject( newEnemy, CurrentRun, { SkipSpawnVoiceLines = true } )
 		  UseableOff({ Id = newEnemy.ObjectId })
 		end
+	end,
+	spawn_meg = function( )
+		   local EnemyTable = {}
+		   table.insert(EnemyTable,"Harpy")
+		  for _,v in ipairs(EnemyTable) do
+		   local enemyData = EnemyData[v]
+		   local newEnemy = DeepCopyTable( enemyData )
+		   newEnemy.ObjectId = SpawnUnit({ Name = enemyData.Name, Group = "Standing", DestinationId = CurrentRun.Hero.ObjectId, OffsetX = math.random(-500,500), OffsetY = math.random(-500,500) })
+		   SetupEnemyObject( newEnemy, CurrentRun, { SkipSpawnVoiceLines = true } )
+		   UseableOff({ Id = newEnemy.ObjectId })
+		  end
 	end
  } 
 
